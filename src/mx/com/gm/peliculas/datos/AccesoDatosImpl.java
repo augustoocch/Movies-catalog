@@ -87,7 +87,7 @@ public class AccesoDatosImpl implements AccesoDatos{
         File documento = new File ("/Users/augustoocchiuzzi/Desktop/JAVA/PROYECTOS/LaboratorioFinal/Peliculas.txt");
         try {
             PrintWriter documentoSalida = new PrintWriter (documento);
-            documentoSalida.print("Se crea el documento: ");
+            documentoSalida.print("CATALOGO \n" + "Peliculas listadas: \n");
             documentoSalida.close();
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();

@@ -8,17 +8,21 @@ import mx.com.gm.peliculas.domain.Peliculas;
 public class CpjLaboratorioFinal {
 public static void main (String [] args ) {
    
+//CREAR
+    //AccesoDatosImpl crear = new AccesoDatosImpl ();
+    //crear.crear("Peliculas");
+ //LOCALIZAr   
     var archivoPeliculas = "/Users/augustoocchiuzzi/Desktop/JAVA/PROYECTOS/LaboratorioFinal/Peliculas.txt";
         
         String menuInicial = new String ("Elija la opcion escribiendo el numero: \n"
         + "1: Iniciar Catalogo \n" + "2: Agregar pelicula \n"
         + "3: Listar pelicula \n" + "4: Buscar pelicula \n" + "0: Salir \n");
         System.out.println(menuInicial);
-    //SCANNER            
+//SCANNER            
         Scanner opciones = new Scanner(System.in);
         var eleccion = Integer.parseInt(opciones.nextLine());
    
-    //ELECCION
+//ELECCION
     var eleccionUsuario = (eleccion);
     var result = "";
 
@@ -63,7 +67,7 @@ public static void main (String [] args ) {
 
 
         if (respuesta.equals("SI")) {
-        menuInicial.repeat();
+        menuInicial.repeat(1);
         }else if (respuesta.equals("NO")) {
         System.out.println("Operaciones de Catalogo finalizadas con exito");
     }
