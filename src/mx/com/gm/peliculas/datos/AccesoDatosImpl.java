@@ -39,9 +39,8 @@ public class AccesoDatosImpl implements AccesoDatos{
         
     //ANEXAR INFO
     @Override
-    public void escribir(String nombre,String archivoPeliculas, String nombrePelicula) {
+    public void escribir(String archivoPeliculas, String nombrePelicula) {
         
-        //nombre.setNombre(nombrePelicula);
         
         File documento = new File(archivoPeliculas);
         try {

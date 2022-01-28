@@ -16,7 +16,7 @@ public class CatalogoPeliculasImpl implements CatalogoPeliculas{
     String scan = scanPelicula.nextLine ();  
     
     AccesoDatosImpl movie = new AccesoDatosImpl ();
-    movie.escribir(scan, archivoPelicula, nombrePelicula);
+    movie.escribir(archivoPelicula, scan);
     
     }
 

@@ -10,7 +10,7 @@ void existe (String archivoPeliculas);
 
 void listar (String nombrePelicula);
              
-void escribir (String nombre, String archivoPeliculas, String nombrePelicula); 
+void escribir (String archivoPeliculas, String nombrePelicula); 
    
 void buscarPelicula (String archivoPeliculas, String buscar);
 

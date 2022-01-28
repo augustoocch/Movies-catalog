@@ -6,24 +6,23 @@ import mx.com.gm.peliculas.datos.AccesoDatosImpl;
 import mx.com.gm.peliculas.domain.Peliculas;
 
 public class CpjLaboratorioFinal {
-
-    public static void main(String[] args){
-
+public static void main (String [] args ) {
+   
     var archivoPeliculas = "/Users/augustoocchiuzzi/Desktop/JAVA/PROYECTOS/LaboratorioFinal/Peliculas.txt";
-           
-        String menuInicial = new String ();
-        menuInicial ="Elija la opcion escribiendo el numero: \n"
-        + "1: Iniciar Catalogo \n" + "2: Agregar pelicula \n"
-        + "3: Listar pelicula \n" + "4: Buscar pelicula \n" + "0: Salir \n";
-        System.out.println("" + menuInicial);
         
+        String menuInicial = new String ("Elija la opcion escribiendo el numero: \n"
+        + "1: Iniciar Catalogo \n" + "2: Agregar pelicula \n"
+        + "3: Listar pelicula \n" + "4: Buscar pelicula \n" + "0: Salir \n");
+        System.out.println(menuInicial);
+    //SCANNER            
         Scanner opciones = new Scanner(System.in);
         var eleccion = Integer.parseInt(opciones.nextLine());
-        var result = "";
-        
+   
     //ELECCION
+    var eleccionUsuario = (eleccion);
+    var result = "";
 
-    switch (eleccion) {
+    switch (eleccionUsuario) {
         case 1:
             result = "Iniciando documento";
             break;
@@ -55,7 +54,6 @@ public class CpjLaboratorioFinal {
             
     }
         
-    
         System.out.println("¿Desea volver al inicio del formulario?: SI/NO");
         Scanner scan = new Scanner (System.in);
         var respuesta = scan.nextLine();
@@ -65,8 +63,7 @@ public class CpjLaboratorioFinal {
 
 
         if (respuesta.equals("SI")) {
-            System.out.println(menuInicial1);
-            Scanner opciones = new Scanner (System.in);
+        menuInicial.repeat();
         }else if (respuesta.equals("NO")) {
         System.out.println("Operaciones de Catalogo finalizadas con exito");
     }
