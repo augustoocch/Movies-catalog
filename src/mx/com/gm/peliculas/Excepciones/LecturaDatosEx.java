@@ -1,4 +1,5 @@
 package mx.com.gm.peliculas.Excepciones;
+import mx.com.gm.peliculas.datos.AccesoDatosImpl;
 
 public class LecturaDatosEx {
     public static String lecturaDatos (String nombrePelicula) {

@@ -36,7 +36,6 @@ public class AccesoDatosImpl implements AccesoDatos{
         }
     }           
                 
-        
     //ANEXAR INFO
     @Override
     public void escribir(String archivoPeliculas, String nombrePelicula) {
@@ -59,25 +58,30 @@ public class AccesoDatosImpl implements AccesoDatos{
     @Override
     public void buscarPelicula(String archivoPeliculas, String buscar) {
         
+        
         System.out.println("Ingrese el nombre de la pelicula a buscar");
         Scanner scanbuscador = new Scanner (System.in);
-        var peliculaBuscada = scanbuscador.nextLine ();
+        String peliculaBuscada = scanbuscador.nextLine ();
         
         File documento = new File(archivoPeliculas);
-        try { var reader = new BufferedReader (new FileReader (archivoPeliculas));
-        var lineaLeida = reader.readLine();
-        if (lineaLeida.equals(peliculaBuscada)) {
-        System.out.println("Pelicula encontrada" + lineaLeida);
-        } else { 
-        lineaLeida = reader.readLine ();
-        } 
-        reader.close();
-        } catch (LecturaDatos ex) {
-        ex.printStackTrace();
+        try {
+            var reader = new BufferedReader(new FileReader(archivoPeliculas));
+            String lineaLeida = reader.readLine();
+            do {
+                lineaLeida = reader.readLine();
+            } while (!lineaLeida.equals(peliculaBuscada));
+            if (lineaLeida.equals(peliculaBuscada)) {
+                System.out.println("Pelicula Encontrada: " + peliculaBuscada);
+            }else { System.out.println(LecturaDatosEx.lecturaDatos(archivoPeliculas));         //("Pelicula no encontrada");
+            }
+            reader.close();
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
         } catch (IOException ex) {
-        ex.printStackTrace();
-        }   
+            ex.printStackTrace();
         }
+    }
+    }
 
     
     //CREACION DEL DOCUMENTO
