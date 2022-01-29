@@ -6,24 +6,31 @@ import mx.com.gm.peliculas.datos.AccesoDatosImpl;
 import mx.com.gm.peliculas.domain.Peliculas;
 
 public class CpjLaboratorioFinal {
-public static void main (String [] args ) {
-   
+public static void main (String [] correr) {
+    
 //CREAR
     //AccesoDatosImpl crear = new AccesoDatosImpl ();
     //crear.crear("Peliculas");
- //LOCALIZAR   
+ 
+//LOCALIZAR   
     var archivoPeliculas = "/Users/augustoocchiuzzi/Desktop/JAVA/PROYECTOS/LaboratorioFinal/Peliculas.txt";
         
-        String menuInicial = new String ("Elija la opcion escribiendo el numero: \n"
-        + "1: Iniciar Catalogo \n" + "2: Agregar pelicula \n"
-        + "3: Listar pelicula \n" + "4: Buscar pelicula \n" + "0: Salir \n");
-        System.out.println(menuInicial);
-//SCANNER            
-        Scanner opciones = new Scanner(System.in);
-        var eleccion = Integer.parseInt(opciones.nextLine());
    
 //ELECCION
-    var eleccionUsuario = (eleccion);
+    Menu eleccionUsuario1 = new Menu();
+    eleccionUsuario1.menuIniciador();
+    
+}
+ //SCANNER
+ 
+ public String elecciones () {
+     
+     var archivoPeliculas = "/Users/augustoocchiuzzi/Desktop/JAVA/PROYECTOS/LaboratorioFinal/Peliculas.txt";
+     
+    System.out.println("---------------");
+    Scanner opciones = new Scanner(System.in);
+    var eleccionUsuario = Integer.parseInt(opciones.nextLine());
+
     var result = "";
 
     switch (eleccionUsuario) {
@@ -60,6 +67,7 @@ public static void main (String [] args ) {
             result = "Menu finalizado";
             System.out.println(result);
             break;
+            
         default:
             System.out.println ("Opcion no contemplada");
             
@@ -68,16 +76,21 @@ public static void main (String [] args ) {
         System.out.println("¿Desea volver al inicio del formulario?: SI/NO");
         Scanner scan = new Scanner (System.in);
         var respuesta = scan.nextLine();
-        
-        String menuInicial1 = new String ();
-        menuInicial1 = menuInicial;
-
 
         if (respuesta.equals("SI")) {
-        menuInicial.repeat(1);
-        }else if (respuesta.equals("NO")) {
-        System.out.println("Operaciones de Catalogo finalizadas con exito");
-    } else { System.out.println("Respete mayusculas. Opcion no leida");
+            
+            Menu eleccionUsuario2 = new Menu();
+            eleccionUsuario2.menuIniciador();
+
+            
+        } else if (respuesta.equals("NO")) {
+            System.out.println("Operaciones de Catalogo finalizadas con exito");
+        } else {
+            System.out.println("Respete mayusculas. Opcion no leida");
+            Menu eleccionUsuario2 = new Menu();
+            eleccionUsuario2.menuIniciador();
+
+        }
     }
 
 }
