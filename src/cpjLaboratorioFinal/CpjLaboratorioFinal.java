@@ -11,7 +11,7 @@ public static void main (String [] args ) {
 //CREAR
     //AccesoDatosImpl crear = new AccesoDatosImpl ();
     //crear.crear("Peliculas");
- //LOCALIZAr   
+ //LOCALIZAR   
     var archivoPeliculas = "/Users/augustoocchiuzzi/Desktop/JAVA/PROYECTOS/LaboratorioFinal/Peliculas.txt";
         
         String menuInicial = new String ("Elija la opcion escribiendo el numero: \n"
@@ -28,11 +28,16 @@ public static void main (String [] args ) {
 
     switch (eleccionUsuario) {
         case 1:
-            result = "Iniciando documento";
+            result = "Abriendo documento";
+            System.out.println(result);
+            
+            CatalogoPeliculasImpl abrirArchivo = new CatalogoPeliculasImpl();
+            abrirArchivo.iniciarArchivo(archivoPeliculas);
             break;
 
         case 2:
             result = "Siga instrucciones";
+            System.out.println(result);
 
             CatalogoPeliculasImpl agregarPeli = new CatalogoPeliculasImpl();
             agregarPeli.agregarPelicula(archivoPeliculas, archivoPeliculas);
@@ -40,6 +45,7 @@ public static void main (String [] args ) {
 
         case 3:
             result = "Listando";
+            System.out.println(result);
             CatalogoPeliculasImpl listador = new CatalogoPeliculasImpl();
             listador.listarPeliculas(archivoPeliculas);
             break;
@@ -52,6 +58,7 @@ public static void main (String [] args ) {
 
         case 0:
             result = "Menu finalizado";
+            System.out.println(result);
             break;
         default:
             System.out.println ("Opcion no contemplada");
@@ -70,7 +77,7 @@ public static void main (String [] args ) {
         menuInicial.repeat(1);
         }else if (respuesta.equals("NO")) {
         System.out.println("Operaciones de Catalogo finalizadas con exito");
-    }
+    } else { System.out.println("Respete mayusculas. Opcion no leida");
     }
 
 }

@@ -1,5 +1,6 @@
 package mx.com.gm.peliculas.negocio;
 
+import java.awt.Desktop;
 import java.io.*;
 import java.util.*;
 import mx.com.gm.peliculas.domain.Peliculas;
@@ -36,8 +37,16 @@ public class CatalogoPeliculasImpl implements CatalogoPeliculas{
 
     @Override
     public void iniciarArchivo(String archivoPeliculas) {
-        
-        
+   
+        try {
+
+            File documento = new File(archivoPeliculas);
+            Desktop.getDesktop().open(documento);
+
+        } catch (IOException ex) {
+
+            System.out.println(ex);
+
     }
     
 }
