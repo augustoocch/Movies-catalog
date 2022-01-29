@@ -19,7 +19,7 @@ public class Menu {
                 
 
                 
-        String menuInicial = new String ("Elija la opcion escribiendo el numero: \n"
+        String menuInicial = new String ("\n Elija la opcion escribiendo el numero: \n"
         + "1: Iniciar Catalogo \n" + "2: Agregar pelicula \n"
         + "3: Listar pelicula \n" + "4: Buscar pelicula \n" + "0: Salir \n");
         System.out.println(menuInicial);

@@ -16,7 +16,7 @@ public static void main (String [] correr) {
     var archivoPeliculas = "/Users/augustoocchiuzzi/Desktop/JAVA/PROYECTOS/LaboratorioFinal/Peliculas.txt";
         
    
-//ELECCION
+//MANDA A MENU
     Menu eleccionUsuario1 = new Menu();
     eleccionUsuario1.menuIniciador();
     
@@ -25,14 +25,16 @@ public static void main (String [] correr) {
  
  public String elecciones () {
      
-     var archivoPeliculas = "/Users/augustoocchiuzzi/Desktop/JAVA/PROYECTOS/LaboratorioFinal/Peliculas.txt";
-     
+    var archivoPeliculas = "/Users/augustoocchiuzzi/Desktop/JAVA/PROYECTOS/LaboratorioFinal/Peliculas.txt";
     System.out.println("---------------");
+    
+//SCANNER
+
     Scanner opciones = new Scanner(System.in);
     var eleccionUsuario = Integer.parseInt(opciones.nextLine());
 
     var result = "";
-
+//SWITCH DE ELECCION
     switch (eleccionUsuario) {
         case 1:
             result = "Abriendo documento";
@@ -64,7 +66,7 @@ public static void main (String [] correr) {
             break;
 
         case 0:
-            result = "Menu finalizado";
+            result = "\n Menu finalizado";
             System.out.println(result);
             break;
             
@@ -72,10 +74,12 @@ public static void main (String [] correr) {
             System.out.println ("Opcion no contemplada");
             
     }
-        
-        System.out.println("¿Desea volver al inicio del formulario?: SI/NO");
+  //SCANNER FINAL       
+        System.out.println("\n ¿Desea volver al inicio del formulario?: SI/NO");
         Scanner scan = new Scanner (System.in);
         var respuesta = scan.nextLine();
+        
+ //CONDICIONAL
 
         if (respuesta.equals("SI")) {
             
@@ -85,8 +89,9 @@ public static void main (String [] correr) {
             
         } else if (respuesta.equals("NO")) {
             System.out.println("Operaciones de Catalogo finalizadas con exito");
+            System.exit(0);
         } else {
-            System.out.println("Respete mayusculas. Opcion no leida");
+            System.out.println("\n Respete mayusculas. Opcion no leida \n");
             Menu eleccionUsuario2 = new Menu();
             eleccionUsuario2.menuIniciador();
 

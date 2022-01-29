@@ -72,7 +72,7 @@ public class AccesoDatosImpl implements AccesoDatos{
             } while (!lineaLeida.equals(peliculaBuscada));
             if (lineaLeida.equals(peliculaBuscada)) {
                 System.out.println("Pelicula Encontrada: " + peliculaBuscada);
-            }else { System.out.println(LecturaDatosEx.lecturaDatos(archivoPeliculas));         //("Pelicula no encontrada");
+            }else { System.out.println(LecturaDatosEx.lecturaDatos(archivoPeliculas));       
             }
             reader.close();
         } catch (FileNotFoundException ex) {
@@ -81,7 +81,7 @@ public class AccesoDatosImpl implements AccesoDatos{
             ex.printStackTrace();
         }
     }
-    }
+    
 
     
     //CREACION DEL DOCUMENTO
