@@ -7,7 +7,7 @@ public interface CatalogoPeliculas {
 
 void agregarPelicula (String archivoPeliculas, String nombrePelicula);
 
-void listarPeliculas (String archivoPeliculas);
+void listarPeliculas (String archivoPeliculas,String nombrePelicula);
 
 void buscarPelicula (String archivoPeliculas, String buscar);
 

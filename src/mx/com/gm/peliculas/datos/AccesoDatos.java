@@ -8,7 +8,7 @@ public interface AccesoDatos {
 
 void existe (String archivoPeliculas);
 
-void listar (String nombrePelicula);
+void listar (String archivoPeliculas, String nombrePelicula);
              
 void escribir (String archivoPeliculas, String nombrePelicula); 
    

@@ -11,6 +11,10 @@ public static void main (String [] correr) {
 //CREAR
     //AccesoDatosImpl crear = new AccesoDatosImpl ();
     //crear.crear("Peliculas");
+    
+//BORRAR
+    //AccesoDatosImpl borrar = new AccesoDatosImpl ();
+    //borrar.borrar("");
  
 //LOCALIZAR   
     var archivoPeliculas = "/Users/augustoocchiuzzi/Desktop/JAVA/PROYECTOS/LaboratorioFinal/Peliculas.txt";
@@ -89,7 +93,7 @@ public static void main (String [] correr) {
             
         } else if (respuesta.equals("NO")) {
             System.out.println("Operaciones de Catalogo finalizadas con exito");
-            System.exit(0);
+            //System.exit(0);
         } else {
             System.out.println("\n Respete mayusculas. Opcion no leida \n");
             Menu eleccionUsuario2 = new Menu();

@@ -22,10 +22,10 @@ public class CatalogoPeliculasImpl implements CatalogoPeliculas{
     }
 
     @Override
-    public void listarPeliculas(String archivoPeliculas) {
+    public void listarPeliculas(String archivoPeliculas, String nombrePelicula) {
         
         AccesoDatosImpl listaCatalogo = new AccesoDatosImpl ();
-        listaCatalogo.listar("");
+        listaCatalogo.listar(archivoPeliculas, nombrePelicula);
     }
 
     @Override

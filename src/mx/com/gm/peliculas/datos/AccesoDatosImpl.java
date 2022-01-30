@@ -25,16 +25,18 @@ public class AccesoDatosImpl implements AccesoDatos{
     }
     //LISTAR CARPETA
     @Override
-    public void listar(String nombrePelicula) {
-      
-        
+    public void listar(String archivoPeliculas, String nombrePelicula) {
+     
+        File documento = new File(archivoPeliculas);
         List listado = new ArrayList();
         listado.add(nombrePelicula);
 
         listado.forEach(elemento -> {
-            System.out.println("" + nombrePelicula);
+        System.out.println("" + nombrePelicula);
+        
         }
-    }           
+    }
+        
                 
     //ANEXAR INFO
     @Override
@@ -115,11 +117,27 @@ public class AccesoDatosImpl implements AccesoDatos{
 /*
 Posibilidad de lista
 
-     /* File lista = new File(nombrePelicula);
+
+        File lista = new File(nombrePelicula);
         String[] listado = lista.list();
         if (listado == null || listado.length == 0) {
             System.out.println("No hay nada para listar");
         } else {
             for (int i = 0; i < listado.length; i++) {
                 System.out.println(listado[i]);
-*/
+------------------------------------------------------------
+
+        File documento = new File(archivoPeliculas);
+        try {
+            var reader = new BufferedReader(new FileReader(archivoPeliculas));
+            String lineaLeida = reader.readLine();
+            while (lineaLeida!= null) {
+                System.out.println(lineaLeida);
+            }
+            lineaLeida = reader.readLine();
+            reader.close();
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        */
