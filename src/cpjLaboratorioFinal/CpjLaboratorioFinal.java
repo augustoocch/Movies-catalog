@@ -93,7 +93,7 @@ public static void main (String [] correr) {
             
         } else if (respuesta.equals("NO")) {
             System.out.println("Operaciones de Catalogo finalizadas con exito");
-            //System.exit(0);
+            System.exit(0);
         } else {
             System.out.println("\n Respete mayusculas. Opcion no leida \n");
             Menu eleccionUsuario2 = new Menu();

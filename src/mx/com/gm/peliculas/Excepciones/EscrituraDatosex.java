@@ -6,11 +6,7 @@ public class EscrituraDatosex {
     
     public static String EscrituraDatosex (String nombrePelicula) {
         
-        
-        
-        
-        
-        
+
         
         if (nombrePelicula.equals("")) {
             throw new RuntimeException ("No agrego ningun titulo valido");
