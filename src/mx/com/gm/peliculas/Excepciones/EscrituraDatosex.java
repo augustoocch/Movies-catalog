@@ -4,17 +4,15 @@ import cpjLaboratorioFinal.*;
 
 public class EscrituraDatosex {
     
-    public static String EscrituraDatosex (String nombrePelicula) {
-        
-
-        
+    public static String EscrituraDatosex (String nombrePelicula) 
+           
+            throws AccesoDatosEx {
+        System.out.println("Validando operacion");
         if (nombrePelicula.equals("")) {
-            throw new RuntimeException ("No agrego ningun titulo valido");
-
-        }  
-        return ("Pelicula: " + '"' + nombrePelicula + '"' + ", agregada con exito");
+            throw new AccesoDatosEx("No agrego ningun titulo valido");
+        }
+        return "Pelicula: " + '"' + nombrePelicula + '"' + ", agregada con exito";
 
     }
-
-    
+}
 

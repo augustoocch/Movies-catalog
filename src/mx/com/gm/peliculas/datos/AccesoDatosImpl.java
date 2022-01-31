@@ -28,14 +28,35 @@ public class AccesoDatosImpl implements AccesoDatos{
     public void listar(String archivoPeliculas, String nombrePelicula) {
      
         File documento = new File(archivoPeliculas);
-        List listado = new ArrayList();
-        listado.add(nombrePelicula);
 
-        listado.forEach(elemento -> {
-        System.out.println("" + nombrePelicula);
+        try {
+            var reader = new BufferedReader(new FileReader(archivoPeliculas));
+            String lineaLeida = reader.readLine();
+            while (lineaLeida!= null) {
+                System.out.println(lineaLeida);
+                lineaLeida = reader.readLine();
+            }
+            reader.close();
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+
+//Map mapa = new HashMap ();
+        //mapa.put("Pelicula: ", nombrePelicula);
+        //String elementos = (String) mapa.get("Pelicula: ");
+        //System.out.println("Titulo: " + nombrePelicula);
+        
+        
+//List listado = new ArrayList();
+        //listado.add(nombrePelicula);
+
+        //listado.forEach(elemento -> {
+        //System.out.println("Catalogo de Peliculas: " + nombrePelicula);
         
         }
     }
+    //}
         
                 
     //ANEXAR INFO
@@ -73,8 +94,8 @@ public class AccesoDatosImpl implements AccesoDatos{
                 lineaLeida = reader.readLine();
             } while (!lineaLeida.equals(peliculaBuscada));
             if (lineaLeida.equals(peliculaBuscada)) {
-                System.out.println("Pelicula Encontrada: " + peliculaBuscada);
-            }else { System.out.println(LecturaDatosEx.lecturaDatos(archivoPeliculas));       
+                System.out.println(LecturaDatosEx.lecturaDatos(peliculaBuscada));//System.out.println("Pelicula Encontrada: " + peliculaBuscada);
+            }else { System.out.println(LecturaDatosEx.lecturaDatos(peliculaBuscada));       
             }
             reader.close();
         } catch (FileNotFoundException ex) {

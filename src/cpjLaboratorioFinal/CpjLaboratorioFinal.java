@@ -15,6 +15,10 @@ public static void main (String [] correr) {
 //BORRAR
     //AccesoDatosImpl borrar = new AccesoDatosImpl ();
     //borrar.borrar("");
+    
+//EXISTE
+    //AccesoDatosImpl existe = new AccesoDatosImpl ();
+    //existe.existe("/Users/augustoocchiuzzi/Desktop/JAVA/PROYECTOS/LaboratorioFinal/Peliculas.txt");
  
 //LOCALIZAR   
     var archivoPeliculas = "/Users/augustoocchiuzzi/Desktop/JAVA/PROYECTOS/LaboratorioFinal/Peliculas.txt";
@@ -60,7 +64,7 @@ public static void main (String [] correr) {
             result = "Listando";
             System.out.println(result);
             CatalogoPeliculasImpl listador = new CatalogoPeliculasImpl();
-            listador.listarPeliculas(archivoPeliculas);
+            listador.listarPeliculas(archivoPeliculas, archivoPeliculas);
             break;
 
         case 4:
